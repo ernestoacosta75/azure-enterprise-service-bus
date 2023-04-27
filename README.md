@@ -99,3 +99,41 @@ From our console application, to authenticate to the Azure Service Bus, wee need
 
 Each instance of the chat application is going to have its own subscription.
 
+# Chapter 03 - Azure Service Bus Scenarios
+
+## Global Azure Racing Game
+
+## Asynchronous website content update
+
+## Service Bus Tiers
+
+**Basic**
+
+It provides queing and schedule messaging and the only charge to the service is based on the message operations that are made against the service.
+
+The Basic tier is really too basic for many scenarios. 
+
+**Standard**
+
+It provides the features that have been available since the Service Bussin was released. We get queues, topics and subscriptions, and it offers a lot more advanced messaging features, such as sessions, deduplication,
+message forwarding.
+
+The billing is based on a base usage charge, as well as a message operations that are made against the service.
+
+The Standard edition provides a good compromise between providing all the features we need and offering very competitive pricing.
+
+**Premium**
+
+It's more attractive for Enterprise customers. It provides dedicated capacity, and that means that the infrastrcture hosting the Service Bus namespace in this tier, will be provisioned and dedicated for that
+particular namespace. And this means the topics, queues and subscriptions can offer very predictable performance and will not be affected by any other users, as will be the case in the multi-tenant Standard tier.
+
+## Pricing
+
+The pricing for the Service Bus is based on **message operations**.
+
+When sending a message to a Service Bus, the number of message operations that are consumed will be the number of 64K block that the message size will take up.
+
+So if we send a message that's 40KB, it will be one messaging operation. For 120KB, that will be two messaging operations, and for 200KB, that will be four messaging operations.
+
+When working with topics and subscriptions, if a client sends a 40KB message and it is subscribed to by just one subscription, then that will be one message operation. If three subscriptions subscribe to that 
+message, that will be three message operations.
