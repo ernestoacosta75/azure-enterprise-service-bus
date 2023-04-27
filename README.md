@@ -95,3 +95,7 @@ The ASB can use two protocols for exchanging messages with the messaging entitie
 From our console application, to authenticate to the Azure Service Bus, wee need to use both the primary/secondary connection string from the ESB.
  - Azure Portal -> ESB namespace -> Settings -> Shared access policies
 
+# Demo ChatConsole using topics and subscriptions
+
+Each instance of the chat application is going to have its own subscription.
+
