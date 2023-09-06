@@ -1,0 +1,9 @@
+{
+	"name": "Demo-MscFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4c3becf3-df41-4ef9-9e1c-dde135f5aa4f",
+		"tenantId": "58b73e7c-e60c-4a7f-9263-24580952f3a2"
+	}
+}
